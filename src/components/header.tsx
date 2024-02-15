@@ -21,7 +21,7 @@ export function Header(props: HeaderProps) {
             Início
           </NavLink>
 
-          <NavLink to="/ordes">
+          <NavLink to="/orders">
             <UtensilsCrossed className="h4 w-4" />
             Pedidos
           </NavLink>
