@@ -2,8 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from '@/layouts/app'
 import { AuthLayout } from '@/layouts/auth'
-import { Dashboard, SignIn, SignUp } from '@/pages'
-import { Orders } from '@/pages/app/orders/orders'
+import { Dashboard, Orders, SignIn, SignUp } from '@/pages'
 
 export const router = createBrowserRouter([
   {

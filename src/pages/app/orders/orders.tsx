@@ -1,5 +1,6 @@
 import { Helmet } from 'react-helmet-async'
 
+import { Pagination } from '@/components/pagination'
 import {
   Table,
   TableBody,
@@ -11,7 +12,7 @@ import {
 import OrderTableFilter from './orderTableFilter'
 import { OrderTableRow } from './orderTableRow'
 
-export interface OrdersProps { }
+export interface OrdersProps {}
 
 export function Orders(props: OrdersProps) {
   return (
@@ -20,31 +21,33 @@ export function Orders(props: OrdersProps) {
 
       <div className="flex flex-col gap-4">
         <h1 className="text-3xl font-bold tracking-tight">Pedidos</h1>
-      </div>
 
-      <div className="space-y-2.5">
         <OrderTableFilter />
-        <div className="rounded-md border">
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead className="w-[64px]"></TableHead>
-                <TableHead className="w-[140px]">Identificador</TableHead>
-                <TableHead className="w-[180px]">Realizado há</TableHead>
-                <TableHead className="w-[140px]">Status</TableHead>
-                <TableHead>Cliente</TableHead>
-                <TableHead className="w-[140px]">Total do pedido</TableHead>
-                <TableHead className="w-[164px]"></TableHead>
-                <TableHead className="w-[132px]"></TableHead>
-              </TableRow>
-            </TableHeader>
 
-            <TableBody>
-              {Array.from({ length: 5 }).map((_, index) => {
-                return <OrderTableRow key={index} />
-              })}
-            </TableBody>
-          </Table>
+        <div className="space-y-2.5">
+          <div className="rounded-md border">
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead className="w-[64px]"></TableHead>
+                  <TableHead className="w-[140px]">Identificador</TableHead>
+                  <TableHead className="w-[180px]">Realizado há</TableHead>
+                  <TableHead className="w-[140px]">Status</TableHead>
+                  <TableHead>Cliente</TableHead>
+                  <TableHead className="w-[140px]">Total do pedido</TableHead>
+                  <TableHead className="w-[164px]"></TableHead>
+                  <TableHead className="w-[132px]"></TableHead>
+                </TableRow>
+              </TableHeader>
+
+              <TableBody>
+                {Array.from({ length: 5 }).map((_, index) => {
+                  return <OrderTableRow key={index} />
+                })}
+              </TableBody>
+            </Table>
+          </div>
+          <Pagination pageIndex={0} perPage={10} totalCount={100} />
         </div>
       </div>
     </>
