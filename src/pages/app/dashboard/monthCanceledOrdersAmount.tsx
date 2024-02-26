@@ -1,4 +1,4 @@
-import { X } from 'lucide-react'
+import { Frown } from 'lucide-react'
 
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card'
 
@@ -9,7 +9,7 @@ export function MonthCanceledOrdersAmount() {
         <CardTitle className="text-base font-semibold">
           Cancelamentos (mês)
         </CardTitle>
-        <X className="h-4 w-4 text-muted-foreground" />
+        <Frown className="h-4 w-4 text-muted-foreground" />
       </CardHeader>
 
       <CardContent className="space-y-1">
