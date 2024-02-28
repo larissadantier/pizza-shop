@@ -5,7 +5,7 @@ import { NavLink } from './navLink'
 import { ThemeToggle } from './theme/themeToggle'
 import { Separator } from './ui/separator'
 
-export interface HeaderProps { }
+export interface HeaderProps {}
 
 export function Header(props: HeaderProps) {
   return (
