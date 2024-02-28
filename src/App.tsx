@@ -13,13 +13,13 @@ import { queryClient } from './lib/react-query'
 function App() {
   return (
     <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <ThemeProvider storageKey="pizzashop-theme" defaultTheme="dark">
-          <Helmet titleTemplate="%s | pizza.shop" />
+      <ThemeProvider storageKey="pizzashop-theme" defaultTheme="dark">
+        <Helmet titleTemplate="%s | pizza.shop" />
+        <QueryClientProvider client={queryClient}>
           <RouterProvider router={router} />
-          <Toaster position="top-right" richColors />
-        </ThemeProvider>
-      </QueryClientProvider>
+        </QueryClientProvider>
+        <Toaster position="top-right" richColors />
+      </ThemeProvider>
     </HelmetProvider>
   )
 }
